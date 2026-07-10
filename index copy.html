@@ -1,0 +1,791 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Villnova Healthcare</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom Css File -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<style>
+    .vnHero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(130deg, #fff, #fcfbff);
+}
+
+.vnHeroShape1 {
+  position: absolute;
+
+  width: 650px;
+
+  height: 650px;
+
+  background: rgba(153, 62, 171, 0.08);
+
+  border-radius: 50%;
+
+  right: -180px;
+
+  top: -250px;
+
+  filter: blur(10px);
+}
+
+.vnHeroShape2 {
+  position: absolute;
+
+  width: 280px;
+
+  height: 280px;
+
+  background: rgba(240, 204, 140, 0.25);
+
+  border-radius: 50%;
+
+  left: -120px;
+
+  bottom: -120px;
+
+  filter: blur(20px);
+}
+
+.vnHeroContent {
+  position: relative;
+
+  z-index: 5;
+}
+
+.vnHeroBadge {
+  display: inline-block;
+
+  padding: 9px 20px;
+
+  background: #fff;
+
+  border-radius: 40px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  color: var(--primary);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  /* margin-bottom: 25px; */
+}
+
+.vnHeroContent h1 {
+  font-size: 56px;
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  color: var(--third);
+
+  margin-bottom: 25px;
+}
+
+.vnHeroContent h1 span {
+  display: block;
+
+  color: var(--primary);
+}
+
+.vnHeroContent p {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: var(--text);
+
+  max-width: 520px;
+}
+
+.vnHeroBtns {
+  display: flex;
+
+  gap: 18px;
+
+  margin-top: 40px;
+
+  flex-wrap: wrap;
+}
+
+.vnPrimaryBtn {
+  background: linear-gradient(135deg, var(--primary), #7f2593);
+
+  color: #fff;
+
+  padding: 15px 32px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  box-shadow: 0 15px 40px rgba(153, 62, 171, 0.35);
+
+  /* transition: 0.4s; */
+}
+
+.vnPrimaryBtn:hover {
+  background: var(--secondary);
+  color: #fff;
+}
+
+.vnOutlineBtn {
+  padding: 15px 32px;
+
+  border-radius: 50px;
+
+  border: 1px solid var(--border);
+
+  background: var(--secondary);
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+.vnOutlineBtn:hover{
+  background-color: var(--primary);
+  color: white;
+}
+
+.vnHeroImageWrap {
+  position: relative;
+  text-align: center;
+}
+
+.vnHeroImageWrap img {
+  max-height: 600px;
+
+  animation: heroFloat 5s infinite ease-in-out;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+@keyframes heroFloat {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.vnFloatingCard {
+  position: absolute;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  backdrop-filter: blur(18px);
+
+  padding: 18px;
+
+  border-radius: 18px;
+
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+
+  z-index: 5;
+}
+
+.vnFloatingCard h5 {
+  margin: 0;
+
+  font-size: 22px;
+
+  color: var(--primary);
+
+  font-weight: 700;
+}
+
+.vnFloatingCard small {
+  font-size: 13px;
+
+  color: var(--text);
+}
+
+.vnCardOne {
+  top: 40px;
+
+  left: 30px;
+}
+
+.vnCardTwo {
+  right: 20px;
+
+  bottom: 80px;
+}
+
+.vnCardThree {
+  bottom: 10px;
+
+  left: 80px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 54px;
+
+  height: 54px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  color: var(--primary);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+.swiper-pagination {
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 11px;
+
+  height: 11px;
+
+  background: #d8c8dc;
+
+  opacity: 1;
+
+  transition: 0.4s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 34px;
+
+  border-radius: 20px;
+
+  background: var(--primary);
+}
+
+@media (max-width: 992px) {
+  .vnHero {
+    padding: 70px 0;
+  }
+
+  .vnHeroContent {
+    text-align: center;
+  }
+
+  .vnHeroContent h1 {
+    font-size: 42px;
+  }
+
+  .vnHeroBtns {
+    justify-content: center;
+  }
+
+  .vnHeroImageWrap {
+    margin-top: 40px;
+  }
+
+  .vnFloatingCard {
+    display: none;
+  }
+  .swiper-button-next,
+.swiper-button-prev{
+  display: none;
+}
+.phonenone{
+  display: none;
+}
+}
+
+@media (max-width: 576px) {
+  .vnHeroContent h1 {
+    font-size: 32px;
+  }
+
+  .vnHeroContent p {
+    font-size: 14px;
+  }
+
+  .vnHeroImageWrap img {
+    max-height: 340px;
+  }
+}
+</style>
+
+<body>
+
+    <!-- Header -->
+    <header class="edu-header" id="header"></header>
+    <!-- Header -->
+
+    <!-- Hero Section -->
+    <section class="vnHero py-4">
+
+        <div class="vnHeroShape1"></div>
+        <div class="vnHeroShape2"></div>
+
+        <div class="container">
+
+            <div class="swiper villHeroSlider">
+
+                <div class="swiper-wrapper">
+
+                    <!-- Slide -->
+
+                    <div class="swiper-slide">
+
+                        <div class="row align-items-center gy-5">
+
+                            <div class="col-lg-5">
+
+                                <div class="vnHeroContent">
+
+                                    <span class="vnHeroBadge">
+                                        Trusted Healthcare
+                                    </span>
+
+                                    <h1>
+                                        Compassionate Care
+                                        <span>For Every Life</span>
+                                    </h1>
+
+                                    <p>
+
+                                        At Villnova Healthcare, our mission is to improve lives through trusted
+                                        healthcare services, advanced medical practices, and compassionate patient care.
+                                        We are committed to supporting every individual with respect, integrity, and
+                                        excellence throughout their healthcare journey.
+
+                                    </p>
+
+                                    <div class="vnHeroBtns">
+
+                                        <a href="#" class="vnPrimaryBtn anchor">
+
+                                            Book Appointment
+
+                                        </a>
+
+                                        <a href="#" class="vnOutlineBtn anchor">
+
+                                            Explore Services
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-7 phonenone">
+
+                                <div class="vnHeroImageWrap">
+
+                                    <div class="vnFloatingCard vnCardOne">
+
+                                        <h5>24×7</h5>
+
+                                        <small>Emergency Care</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardTwo">
+
+                                        <h5>5000+</h5>
+
+                                        <small>Happy Patients</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardThree">
+
+                                        <h5>100%</h5>
+
+                                        <small>Trusted Healthcare</small>
+
+                                    </div>
+
+                                    <img src="assets/media/logo.png" class="img-fluid">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide -->
+
+                    <div class="swiper-slide">
+
+                        <div class="row align-items-center gy-5">
+
+                            <div class="col-lg-5">
+
+                                <div class="vnHeroContent">
+
+                                    <span class="vnHeroBadge">
+                                        Trusted Healthcare
+                                    </span>
+
+                                    <h1>
+                                        Compassionate Care
+                                        <span>For Every Life</span>
+                                    </h1>
+
+                                    <p>
+
+                                        At Villnova Healthcare, our mission is to improve lives through trusted
+                                        healthcare services, advanced medical practices, and compassionate patient care.
+                                        We are committed to supporting every individual with respect, integrity, and
+                                        excellence throughout their healthcare journey.
+
+                                    </p>
+
+                                    <div class="vnHeroBtns">
+
+                                        <a href="#" class="vnPrimaryBtn anchor">
+
+                                            Book Appointment
+
+                                        </a>
+
+                                        <a href="#" class="vnOutlineBtn anchor">
+
+                                            Explore Services
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-7 phonenone">
+
+                                <div class="vnHeroImageWrap">
+
+                                    <div class="vnFloatingCard vnCardOne">
+
+                                        <h5>24×7</h5>
+
+                                        <small>Emergency Care</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardTwo">
+
+                                        <h5>5000+</h5>
+
+                                        <small>Happy Patients</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardThree">
+
+                                        <h5>100%</h5>
+
+                                        <small>Trusted Healthcare</small>
+
+                                    </div>
+
+                                    <img src="assets/media/logo.png" class="img-fluid">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide -->
+
+                    <div class="swiper-slide">
+
+                        <div class="row align-items-center gy-5">
+
+                            <div class="col-lg-5">
+
+                                <div class="vnHeroContent">
+
+                                    <span class="vnHeroBadge">
+                                        Trusted Healthcare
+                                    </span>
+
+                                    <h1>
+                                        Compassionate Care
+                                        <span>For Every Life</span>
+                                    </h1>
+
+                                    <p>
+
+                                        At Villnova Healthcare, our mission is to improve lives through trusted
+                                        healthcare services, advanced medical practices, and compassionate patient care.
+                                        We are committed to supporting every individual with respect, integrity, and
+                                        excellence throughout their healthcare journey.
+
+                                    </p>
+
+                                    <div class="vnHeroBtns">
+
+                                        <a href="#" class="vnPrimaryBtn anchor">
+
+                                            Book Appointment
+
+                                        </a>
+
+                                        <a href="#" class="vnOutlineBtn anchor">
+
+                                            Explore Services
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-7 phonenone">
+
+                                <div class="vnHeroImageWrap">
+
+                                    <div class="vnFloatingCard vnCardOne">
+
+                                        <h5>24×7</h5>
+
+                                        <small>Emergency Care</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardTwo">
+
+                                        <h5>5000+</h5>
+
+                                        <small>Happy Patients</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardThree">
+
+                                        <h5>100%</h5>
+
+                                        <small>Trusted Healthcare</small>
+
+                                    </div>
+
+                                    <img src="assets/media/logo.png" class="img-fluid">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide -->
+
+                    <div class="swiper-slide">
+
+                        <div class="row align-items-center gy-5">
+
+                            <div class="col-lg-5">
+
+                                <div class="vnHeroContent">
+
+                                    <span class="vnHeroBadge">
+                                        Trusted Healthcare
+                                    </span>
+
+                                    <h1>
+                                        Compassionate Care
+                                        <span>For Every Life</span>
+                                    </h1>
+
+                                    <p>
+
+                                        At Villnova Healthcare, our mission is to improve lives through trusted
+                                        healthcare services, advanced medical practices, and compassionate patient care.
+                                        We are committed to supporting every individual with respect, integrity, and
+                                        excellence throughout their healthcare journey.
+
+                                    </p>
+
+                                    <div class="vnHeroBtns">
+
+                                        <a href="#" class="vnPrimaryBtn anchor">
+
+                                            Book Appointment
+
+                                        </a>
+
+                                        <a href="#" class="vnOutlineBtn anchor">
+
+                                            Explore Services
+
+                                        </a>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-7 phonenone">
+
+                                <div class="vnHeroImageWrap">
+
+                                    <div class="vnFloatingCard vnCardOne">
+
+                                        <h5>24×7</h5>
+
+                                        <small>Emergency Care</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardTwo">
+
+                                        <h5>5000+</h5>
+
+                                        <small>Happy Patients</small>
+
+                                    </div>
+
+                                    <div class="vnFloatingCard vnCardThree">
+
+                                        <h5>100%</h5>
+
+                                        <small>Trusted Healthcare</small>
+
+                                    </div>
+
+                                    <img src="assets/media/logo.png" class="img-fluid">
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-next"></div>
+
+                <div class="swiper-button-prev"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Hero Section -->
+
+
+    <div style="width: 100px; height: 100px; background: red;"></div>
+
+    <main>
+
+
+
+
+        
+
+
+
+    </main>
+
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        new Swiper(".villHeroSlider", {
+
+            loop: true,
+
+            speed: 1200,
+
+            effect: "slide",
+
+            autoplay: {
+
+                delay: 5000,
+
+                disableOnInteraction: false
+
+            },
+
+            pagination: {
+
+                el: ".swiper-pagination",
+
+                clickable: true
+
+            },
+
+            navigation: {
+
+                nextEl: ".swiper-button-next",
+
+                prevEl: ".swiper-button-prev"
+
+            }
+
+        });
+    </script>
+
+
+
+    <!-- Custom Js File -->
+    <script src="assets/js/script.js"></script>
+
+
+
+</body>
+
+</html>

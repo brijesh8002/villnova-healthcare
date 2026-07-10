@@ -17,10 +17,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <!-- Custom Css File -->
     <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
+
 
 <body>
 
@@ -28,8 +33,167 @@
     <header class="edu-header" id="header"></header>
     <!-- Header -->
 
+    <!-- Hero Section -->
+    <section class="studycapsule-hero">
+
+        <!-- Background Image in HTML -->
+        <img src="assets/media/vilnova-banner.jpg" alt="Vilnova Healthcare Banner" class="hero-bg-img">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container position-relative">
+
+            <div class="row">
+
+                <div class="col-lg-7">
+
+                    <div class="hero-content">
+
+                        <span class="hero-badge">
+                            🌿 Vilnova Healthcare
+                        </span>
+
+                        <h1>
+                            Your Trusted Partner for Better Health & Wellness
+                        </h1>
+
+                        <p>
+                            Discover premium Nutraceuticals, Dietary Supplements,
+                            Women's Wellness solutions, PCOS/PCOD Care, Doctor
+                            Consultation, and Health & Wellness Products designed
+                            to support a healthier lifestyle.
+                        </p>
+
+                        <!-- <div class="hero-search" data-bs-toggle="modal" data-bs-target="#globalSearchModal">
+
+                        <input type="text" placeholder="Search Health & Wellness Products">
+
+                        <button>
+                            Search
+                        </button>
+
+                    </div> -->
+
+                        <div class="hero-highlights">
+
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-capsule-pill"></i>
+                                </div>
+                                <div>
+                                    <h6>Premium</h6>
+                                    <span>Nutraceuticals</span>
+                                </div>
+                            </div>
+
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-heart-pulse-fill"></i>
+                                </div>
+                                <div>
+                                    <h6>Women's Wellness</h6>
+                                    <span>PCOS/PCOD Care</span>
+                                </div>
+                            </div>
+
+                            <div class="highlight-card">
+                                <div class="highlight-icon">
+                                    <i class="bi bi-person-heart"></i>
+                                </div>
+                                <div>
+                                    <h6>Expert</h6>
+                                    <span>Doctor Consultation</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Hero Section -->
+
+    <!-- About Section -->
+    <section class="about-section my-5">
+        <div class="container">
+
+            <div class="about">
+
+                <div class="row align-items-center g-5">
+
+                    <div class="col-lg-5">
+                        <div class="about-icon">
+                            <img src="assets/media/vilnovaabout.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+
+                        <span class="section-tag">
+                            About Vilnova Healthcare
+                        </span>
+
+                        <h2>
+                            Committed to Better Health, Better Living
+                        </h2>
+
+                        <p>
+                            At Vilnova Healthcare, we are dedicated to improving
+                            everyday health through high-quality Nutraceuticals,
+                            Dietary Supplements, Women's Wellness solutions,
+                            specialized PCOS/PCOD Care, Doctor Consultation, and
+                            trusted Health & Wellness Products. Our mission is to
+                            empower individuals with safe, effective, and
+                            science-backed healthcare solutions for every stage of life.
+                        </p>
+
+                        <div class="features-grid">
+
+                            <div class="feature-item">
+                                <i class="bi bi-capsule"></i>
+                                Nutraceuticals
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="bi bi-heart-pulse"></i>
+                                Women's Wellness
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="bi bi-shield-check"></i>
+                                PCOS/PCOD Care
+                            </div>
+
+                            <div class="feature-item">
+                                <i class="bi bi-person-video3"></i>
+                                Doctor Consultation
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- About Section -->
+
     <main>
-        
+
+
+
+
+
+
 
 
     </main>
@@ -48,11 +212,48 @@
 
 
 
+
+
     <!-- Custom Js File -->
     <script src="assets/js/script.js"></script>
 
 
+    <script>
+        const heroSlider = new Swiper(".vhHeroSlider", {
 
+            loop: true,
+
+            speed: 1200,
+
+            grabCursor: true,
+
+            effect: "slide",
+
+            centeredSlides: false,
+
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".vhNavNext",
+                prevEl: ".vhNavPrev",
+            },
+
+            keyboard: {
+                enabled: true,
+            },
+
+            mousewheel: false,
+
+        });
+    </script>
 </body>
 
 </html>
